@@ -1,0 +1,26 @@
+int a = 0;
+int b;
+void setup() {
+  Serial.begin(9600);
+}
+void loop() {
+  b = Evenfunction(a);  // we can store the function return value in variable b
+  Serial.print(a);
+  Serial.print(" : ");  // to separate even or odd text
+  if (b == 1) {
+    Serial.println(" Number is even");
+  } else {
+    Serial.println("Number is odd");
+  }
+
+   a++;  // the function will increment and will again run
+  delay(1000);
+}
+
+int Evenfunction(int d) {
+  if (d % 2 == 0) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
